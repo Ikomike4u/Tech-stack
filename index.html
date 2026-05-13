@@ -229,13 +229,13 @@ footer{background:#000;text-align:center;padding:16px;font-size:.65rem;color:#33
 </head>
 <body>
 
-<a href="#" class="float-btn buy-trigger">⬇️ Download Now — ₦39,820</a>
+<a href="https://payhip.com/b/xeqSM/af69fdd1f787da7" class="float-btn" target="_blank">⬇️ Download Now — ₦39,820</a>
 
 <div class="ticker"><div class="ticker-inner">⚡ 219 VIEWS &nbsp;•&nbsp; 42 ORDERS &nbsp;•&nbsp; ₦51M+ IN STUDENT SALES &nbsp;•&nbsp; 4 PERSONAL COACHES &nbsp;•&nbsp; INSTANT ACCESS AFTER PAYMENT &nbsp;•&nbsp; SECURE CHECKOUT VIA PAYSTACK &nbsp;&nbsp;&nbsp;&nbsp; ⚡ 219 VIEWS &nbsp;•&nbsp; 42 ORDERS &nbsp;•&nbsp; ₦51M+ IN STUDENT SALES &nbsp;•&nbsp; 4 PERSONAL COACHES &nbsp;•&nbsp; INSTANT ACCESS AFTER PAYMENT &nbsp;•&nbsp; SECURE CHECKOUT VIA PAYSTACK &nbsp;&nbsp;&nbsp;&nbsp;</div></div>
 
 <nav>
   <div class="nav-logo">EEM26</div>
-  <a href="#" class="nav-btn buy-trigger">⬇️ Download Now</a>
+  <a href="https://payhip.com/b/xeqSM/af69fdd1f787da7" class="nav-btn" target="_blank">⬇️ Download Now</a>
 </nav>
 
 <!-- TOP TIMER -->
@@ -279,7 +279,7 @@ footer{background:#000;text-align:center;padding:16px;font-size:.65rem;color:#33
       <span class="new-price">₦39,820</span>
       <span class="save-badge">43% OFF</span>
     </div>
-    <a href="#" class="dl-btn buy-trigger">⬇️ Download The Tech Stack Now</a>
+    <a href="https://payhip.com/b/xeqSM/af69fdd1f787da7" class="dl-btn" target="_blank">⬇️ Download The Tech Stack Now</a>
     <div class="btn-note">🔒 Secure Checkout · Paystack & Flutterwave · Instant Access</div>
   </div>
 </section>
@@ -377,7 +377,7 @@ footer{background:#000;text-align:center;padding:16px;font-size:.65rem;color:#33
     </div>
 
     <div style="text-align:center;margin-top:36px" class="reveal">
-      <a href="#" class="dl-btn buy-trigger">⬇️ I Want This — Download Now</a>
+      <a href="https://payhip.com/b/xeqSM/af69fdd1f787da7" class="dl-btn" target="_blank">⬇️ I Want This — Download Now</a>
       <p class="btn-note" style="margin-top:10px">₦39,820 · Instant Access · 4 Coaches Ready</p>
     </div>
   </div>
@@ -530,7 +530,7 @@ footer{background:#000;text-align:center;padding:16px;font-size:.65rem;color:#33
       <span class="new-price">₦39,820</span>
       <span class="save-badge">TODAY ONLY</span>
     </div>
-    <a href="#" class="dl-btn buy-trigger">⬇️ Download The Tech Stack Now</a>
+    <a href="https://payhip.com/b/xeqSM/af69fdd1f787da7" class="dl-btn" target="_blank">⬇️ Download The Tech Stack Now</a>
     <div class="btn-note">🔒 Secure Payment via Paystack & Flutterwave &nbsp;·&nbsp; ✅ Instant Access &nbsp;·&nbsp; 📞 4 Coaches Ready</div>
   </div>
 </section>
@@ -645,19 +645,6 @@ const tick = setInterval(() => {
   if(topSecs) topSecs.textContent = s;
 }, 1000);
 
-// ── AFFILIATE TRACKING ──
-const BASE_URL = "https://payhip.com/b/xeqSM";
-function getParam(n){ return new URLSearchParams(window.location.search).get(n); }
-function setLinks(){
-  const af = getParam('af');
-  const url = af ? BASE_URL + '/' + encodeURIComponent(af) : BASE_URL;
-  ['hero-dl','final-dl','float-dl','nav-dl','proof-dl'].forEach(id => {
-    const el = document.getElementById(id);
-    if(el) el.href = url;
-  });
-}
-setLinks();
-
 // ── SCROLL REVEAL ──
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -665,18 +652,6 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.07 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// ── PAYHIP POPUP ──
-document.querySelectorAll('.buy-trigger').forEach(el => {
-  el.addEventListener('click', function(e) {
-    e.preventDefault();
-    if(window.Payhip && Payhip.Checkout) {
-      Payhip.Checkout.open({ product: 'xeqSM' });
-    } else {
-      window.open('https://payhip.com/b/xeqSM', '_blank');
-    }
-  });
-});
 </script>
 </body>
 </html>
